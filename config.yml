@@ -10,7 +10,6 @@ jdbcURL : jdbc:mysql://192.168.137.221:3306/sampledb
 #while using normally through dropwizard ou can also write localhost
 username_sql : root
 password_sql : root
-USER_AGENT : Mozilla/5.0
 GET_URL : http://dummy.restapiexample.com/api/v1/employees
 POST_URL : http://dummy.restapiexample.com/api/v1/create
 POST_PARAMS : name=sameer&salary=100&age=10

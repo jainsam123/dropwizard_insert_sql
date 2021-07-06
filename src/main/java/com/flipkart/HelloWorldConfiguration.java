@@ -66,6 +66,7 @@ public class HelloWorldConfiguration extends Configuration {
         return USER_AGENT;
     }
 
+    @JsonProperty
     public String getGET_URL() {
         return GET_URL;
     }
