@@ -4,6 +4,9 @@ logging:
     com.flipkart: DEBUG
 template: Hello, %s!
 defaultName: Stranger
-jdbcURL : jdbc:mysql://192.168.0.106:3306/sampledb
+jdbcURL : jdbc:mysql://192.168.137.221:3306/sampledb
+#in case of using through docker
+#jdbcURL : jdbc:mysql://<your private ip address>:3306/sampledb
+#while using normally through dropwizard ou can also write localhost
 username_sql : root
 password_sql : root
