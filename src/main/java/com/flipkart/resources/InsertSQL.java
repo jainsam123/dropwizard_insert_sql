@@ -23,9 +23,9 @@ public class InsertSQL {
     @POST
     @Timed
     public String sayHello(@NotNull @QueryParam("username") String username,
-                           @QueryParam("password") String password,
-                           @QueryParam("fullname") String fullname ,
-                           @QueryParam("email") String email
+                           @NotNull @QueryParam("password") String password,
+                           @NotNull @QueryParam("fullname") String fullname ,
+                           @NotNull @QueryParam("email") String email
         ) {
 
         try {
