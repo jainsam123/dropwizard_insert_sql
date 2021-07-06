@@ -1,0 +1,6 @@
+com\flipkart\api\Saying.class
+com\flipkart\HelloWorldApplication.class
+com\flipkart\health\TemplateHealthCheck.class
+com\flipkart\HelloWorldConfiguration.class
+com\flipkart\resources\InsertSQL.class
+com\flipkart\resources\HelloWorldResource.class
