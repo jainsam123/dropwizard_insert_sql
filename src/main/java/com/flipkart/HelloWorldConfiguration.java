@@ -2,16 +2,23 @@ package com.flipkart;
 
 import io.dropwizard.Configuration;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import javax.validation.constraints.NotNull;
 
 public class HelloWorldConfiguration extends Configuration {
     private String template;
 
-    private String defaultName = "Straw";
+    private String defaultName;
 
     private String jdbcURL;
     private String username_sql;
     private String password_sql;
+    private String USER_AGENT ;
+    private String GET_URL;
+    private String POST_URL ;
+
+    private String POST_PARAMS;
+
+    public HelloWorldConfiguration() {
+    }
 
     @JsonProperty
     public String getTemplate() {
@@ -28,10 +35,6 @@ public class HelloWorldConfiguration extends Configuration {
         return defaultName;
     }
 
-    @JsonProperty
-    public void setDefaultName(String name) {
-        this.defaultName = name;
-    }
 
     @JsonProperty
     public String getJdbcURL() {
@@ -47,4 +50,24 @@ public class HelloWorldConfiguration extends Configuration {
     public String getPassword_sql() {
         return password_sql;
     }
+
+    @JsonProperty
+    public String getPOST_PARAMS() {
+        return POST_PARAMS;
+    }
+
+    @JsonProperty
+    public String getPOST_URL() {
+        return POST_URL;
+    }
+
+    @JsonProperty
+    public String getUSER_AGENT() {
+        return USER_AGENT;
+    }
+
+    public String getGET_URL() {
+        return GET_URL;
+    }
+
 }

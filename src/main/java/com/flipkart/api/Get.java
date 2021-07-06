@@ -7,15 +7,16 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class Get {
-    private static final String USER_AGENT = "Mozilla/5.0";
+    private static String USER_AGENT ;
 
-    private static final String GET_URL = "http://dummy.restapiexample.com/api/v1/employees";
+    private static String GET_URL ;
 
-    public static void main(String[] args) throws IOException {
-        sendHttpGETRequest();
+    public Get (String USER_AGENT,String GET_URL)
+    {
+        Get.USER_AGENT =USER_AGENT;
+        Get.GET_URL =GET_URL;
     }
-
-    private static void sendHttpGETRequest() throws IOException {
+    public void sendHttpGETRequest() throws IOException {
         URL obj = new URL(GET_URL);
         HttpURLConnection httpURLConnection = (HttpURLConnection) obj.openConnection();
         httpURLConnection.setRequestMethod("GET");

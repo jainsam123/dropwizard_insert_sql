@@ -1,27 +1,30 @@
 
 package com.flipkart.api;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 
 public class Post {
 
-    private static final String USER_AGENT = "Mozilla/5.0";
+    private static String USER_AGENT ;
 
-    private static final String POST_URL = "http://dummy.restapiexample.com/api/v1/create";
+    private static String POST_URL ;
 
-    private static final String POST_PARAMS = "name=sameer&salary=100&age=10";
+    private static String POST_PARAMS;
 
-    public static void main(String[] args) throws IOException {
-        sendPost();
+    public Post (String USER_AGENT,String POST_URL,String POST_PARAMS)
+    {
+        Post.POST_PARAMS =POST_PARAMS;
+        Post.POST_URL =POST_URL;
+        Post.USER_AGENT =USER_AGENT;
     }
 
-    private static void sendPost() throws IOException {
+
+
+    public void sendPost() throws IOException {
         URL obj = new URL(POST_URL);
         HttpURLConnection httpURLConnection = (HttpURLConnection) obj.openConnection();
         httpURLConnection.setRequestMethod("GET");
