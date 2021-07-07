@@ -11,11 +11,9 @@ public class HelloWorldConfiguration extends Configuration {
     private String jdbcURL;
     private String username_sql;
     private String password_sql;
-    private String USER_AGENT ;
-    private String GET_URL;
-    private String POST_URL ;
-
-    private String POST_PARAMS;
+    private String base_url;
+    private String get_path;
+    private String post_path;
 
     public HelloWorldConfiguration() {
     }
@@ -51,24 +49,46 @@ public class HelloWorldConfiguration extends Configuration {
         return password_sql;
     }
 
-    @JsonProperty
-    public String getPOST_PARAMS() {
-        return POST_PARAMS;
+
+
+    public void setDefaultName(String defaultName) {
+        this.defaultName = defaultName;
     }
 
-    @JsonProperty
-    public String getPOST_URL() {
-        return POST_URL;
+    public void setJdbcURL(String jdbcURL) {
+        this.jdbcURL = jdbcURL;
     }
 
-    @JsonProperty
-    public String getUSER_AGENT() {
-        return USER_AGENT;
+    public void setUsername_sql(String username_sql) {
+        this.username_sql = username_sql;
     }
 
-    @JsonProperty
-    public String getGET_URL() {
-        return GET_URL;
+    public void setPassword_sql(String password_sql) {
+        this.password_sql = password_sql;
     }
 
+
+    public String getBase_url() {
+        return base_url;
+    }
+
+    public void setBase_url(String base_url) {
+        this.base_url = base_url;
+    }
+
+    public String getGet_path() {
+        return get_path;
+    }
+
+    public void setGet_path(String get_path) {
+        this.get_path = get_path;
+    }
+
+    public String getPost_path() {
+        return post_path;
+    }
+
+    public void setPost_path(String post_path) {
+        this.post_path = post_path;
+    }
 }

@@ -7,6 +7,9 @@ import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import com.flipkart.resources.HelloWorldResource;
+import com.flipkart.constants.constant;
+
+import javax.validation.constraints.NotNull;
 
 public class HelloWorldApplication extends Application<HelloWorldConfiguration> {
 
@@ -37,10 +40,9 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
                 configuration.getUsername_sql(),
                 configuration.getPassword_sql());
         final RestAPICalls restAPICalls = new RestAPICalls(
-                configuration.getUSER_AGENT(),
-                configuration.getGET_URL(),
-                configuration.getPOST_URL(),
-                configuration.getPOST_PARAMS()
+                constant.USER_AGENT,
+                configuration.getBase_url() + configuration.getGet_path(),
+                configuration.getBase_url()+ configuration.getPost_path()
         );
 
         final TemplateHealthCheck healthCheck =

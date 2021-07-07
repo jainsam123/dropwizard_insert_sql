@@ -1,5 +1,7 @@
 package com.flipkart.api;
 
+import com.flipkart.constants.constant;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,15 +9,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class Get {
-    private static String USER_AGENT ;
-
-    private static String GET_URL ;
-
+    private final String USER_AGENT ;
+    private final String GET_URL;
     public Get (String USER_AGENT,String GET_URL)
     {
-        Get.USER_AGENT =USER_AGENT;
-        Get.GET_URL =GET_URL;
+        this.USER_AGENT =USER_AGENT;
+        this.GET_URL =GET_URL;
     }
+
     public void sendHttpGETRequest() throws IOException {
         URL obj = new URL(GET_URL);
         HttpURLConnection httpURLConnection = (HttpURLConnection) obj.openConnection();
@@ -33,7 +34,7 @@ public class Get {
             } in .close();
 
             // print result
-            System.out.println(response.toString());
+            System.out.println(response);
         } else {
             System.out.println("GET request not worked");
         }
